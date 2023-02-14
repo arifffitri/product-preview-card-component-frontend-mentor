@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+/* reset css */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+	--dark-blue: hsl(212, 21%, 14%);
+	--grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body{
+	background-color: var(--cream);
+	
+	/* push the element to the center */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 1px);
+	margin: 1.25rem;
+}
+
+.card{
+	display: grid;
+	
+	/* display grid side by side */
+	grid-template-columns: 1fr 1fr;
+	background-color: var(--white);
+	border-radius: 1rem;
+}
+
+/* padding of the content */
+.card div{
+	padding: 1.875rem ;
+}
+
+.content h1{
+	font-size: 11px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.4rem;
+	color: var(--dark-cyan);
+	text-align: left;
+	font-weight: lighter;
+}
+
+.content h2{
+	font-size: 32px;
+	font-family: 'Fraunces', serif;
+	color: var(--dark-blue);
+	text-align: left;
+	margin: 1rem 0;
+}
+
+.content p{
+	font-size: 0.875rem;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5rem;
+	color: var(--dark-cyan);
+	margin: 0.75rem 0;
+}
+
+.price {
+	
+	/* display the prices side by side */
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.price .new{
+	font-size: 2rem;
+	font-family: 'Fraunces', serif;
+	color: var(--dark-cyan);
+}
+
+.price .old{
+	font-size: 0.875rem;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--dark-cyan);
+	text-decoration: line-through;
+}
+
+/* adjust the product image */
+.card img{
+	max-width: 100%;
+	border-radius: 1rem 0 0 1rem;
+}
+
+/* customize the button  */
+.card button{
+	width: 14.75rem;
+	height: 3rem;
+	border: none;
+	color: var(--white);
+	background-color: #3D8168;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	
+	/* display the icon beside 'add to cart' text */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.25rem;
+}
+
+/* adjust the button icon */
+.icon {
+
+	/* difference between text and icon */
+	margin-right: 12px;
+}
+
+.card button:hover{
+	background-color: #1A4031;
+}
+
+.attribution {
+	margin-top: 1rem;
+    font-size: 13px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+/* control the width and height of the box */
+@media (min-width: 700px) {
+    .card{
+        width: 600px;
+		height: 450px;
+    }
+}
